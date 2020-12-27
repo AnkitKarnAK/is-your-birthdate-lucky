@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Birthdate</title>
+
+    <link href="styles.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <nav>
+        <div style="font-size:2rem;
+     padding:1rem;"> Is your birthdate lucky?</div>
+
+
+    </nav>
+
+
+
+    <main>
+        <img class="nav-png" src="/images/luckyday.png">
+
+        <textarea id="txt-input" placeholder="enter your favorite number"></textarea>
+        <br><br>
+
+        <p>
+            <h4> Please enter your date of birth:</h3>
+        </p>
+        <input type="date" id="dob-input" value="2000-01-01"></p>
+
+        <button id="btn-submit">Submit</button>
+
+
+        <h4> The sum of your birthdate is: <div id="dob-result"></div>
+        </h4>
+
+
+        <div class="luck-check"> Let's check is your birthdate lucky for you?</div><br>
+        <div id="output"> </div>
+        <div id="gif-output"></div>
+
+    </main>
+
+    <footer class="footer">
+        <div style="font-size:x-large;">
+            <bold>About </bold>
+        </div>
+        <p>This lucky birthdate checker, checks if the sum of digits if your birthdate is divisible by your lucky number
+            then your birthday is consider as lucky for you. <br><small>Disclaimer: we will not store any of your
+                info</small><br></p>
+        <div class="footer-header">Check my</div>
+        <ul class="social-links list-non-bullet">
+            <li class="list-item-inline"><a class="link" href="https://ankitkarnportfolio.netlify.com/" target="_blank"> <i class="fas fa-user-tie social-icon"></i>Portfolio</a>
+            </li>
+            <li class="list-item-inline"><a class="link" href="https://github.com/ankitkarnak" target="_blank"><i
+                        class="fa fa-github social-icon"></i>Github</a></li>
+            
+            
+        </ul>
+    </footer>
+
+
+
+
+    <script src="app.js" type="text/javascript"></script>
+    <script src="https://kit.fontawesome.com/166ce6ac23.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
