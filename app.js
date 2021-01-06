@@ -1,8 +1,9 @@
 var btnSubmit=document.querySelector('#btn-submit');
 var dobInput=document.querySelector('#dob-input');
-var dobResult=document.querySelector('#dob-result');
+
 var outputDiv=document.querySelector('#output');
-var inputText=document.querySelector('#txt-input')
+var inputText=document.querySelector('#txt-input');
+var gifOutput=document.querySelector('#gif-output');
 
 
 
@@ -22,22 +23,37 @@ function clickHandler(){
 
 
     var dobSum=sumDigits(dobInt);
-    dobResult.innerText=dobSum;
+
 
     var favNo=inputText.value;
     
     var divideModulus=dobSum%favNo;
+
+    outputDiv.innerText="Loading. . .";
+    gifOutput.innerHTML="<img src='/images/timer.gif'>";
+
     if(divideModulus===0){
-        var luck="your birthdate is lucky ";
-        var myImage = document.createElement("img");
-        myImage.setAttribute("src", "/images/tada.gif");
-        document.querySelector('#gif-output').appendChild(myImage);
+        var luck="Wohoo! your birthdate is lucky ";
+        // var myImage = document.createElement("img");
+        // myImage.setAttribute("src", "/images/tada.gif");
+        // gifOutput.appendChild(myImage);
+        setTimeout(function () {
+            gifOutput.innerHTML="<img src='/images/tada.png'>";
+            outputDiv.innerText=luck;
+        }, 4850);
+        
+
+
     }else{
-        var luck="your birthdate is not that lucky :("
+        var luck="Your birthdate is not that lucky :(";
+        setTimeout(function () {
+            gifOutput.innerHTML="<img src='/images/sad.png'>";
+            outputDiv.innerText=luck;
+        }, 4850);
+        
     }
 
-    outputDiv.innerText=luck;
-
+    
 
     
     
